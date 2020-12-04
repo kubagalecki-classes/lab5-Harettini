@@ -37,5 +37,8 @@ int main()
     std::cout << &li.front() << "\t" << &li.back() << "\n";
     li.push_front(2);
     li.push_front(1);
-    std::cout << "\t";
+    for (std::list< int >::iterator it = li.begin(); it != li.end(); it++)
+        std::cout << *it << "\t";
+    for (std::list< int >::iterator it = li.end(); it != li.begin();)
+        std::cout << *--it << "\t";
 }
